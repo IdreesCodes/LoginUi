@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:login_ui/dashboard.dart';
+
 class SignUp extends StatefulWidget {
   const SignUp({Key? key}) : super(key: key);
-
+  static const routeName='signUp';
   @override
   State<SignUp> createState() => _SignUpState();
 }
@@ -52,7 +53,7 @@ class _SignUpState extends State<SignUp> {
                   decoration: InputDecoration(
                       hintText: 'Enter Your Name',
                       filled: true,
-                      prefixIcon: Icon(Icons.email_outlined),
+                     prefixIcon: Icon(Icons.email_outlined),
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(30),
 
@@ -132,7 +133,7 @@ class _SignUpState extends State<SignUp> {
     {
 
 
-                  Navigator.push(context,MaterialPageRoute(builder: (context)=> DashBoard()));
+      Navigator.pushNamed(context, 'dashboard');
                 },
               )
             ],
@@ -144,3 +145,5 @@ class _SignUpState extends State<SignUp> {
     );
   }
 }
+
+//
