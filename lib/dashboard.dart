@@ -1,20 +1,30 @@
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
-class DashBoard extends StatefulWidget {
-  const DashBoard({Key? key}) : super(key: key);
+import 'package:login_ui/dashboard.dart';
+import 'package:login_ui/home_screen.dart';
+import 'package:login_ui/signUp.dart';
 
-  @override
-  State<DashBoard> createState() => _DashBoardState();
+void main() {
+  runApp(const MyApp());
 }
 
-class _DashBoardState extends State<DashBoard> {
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Dashboard'),
-      ),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Flutter Demo',
+     initialRoute: HomeScreen.routeName,
+      routes: {
+        HomeScreen.routeName: (context) => HomeScreen(),
+        SignUp.routeName : (context) => SignUp(),
+        DashBoard.routeName: (context) => DashBoard(),
 
+      },
     );
   }
 }
+
+
