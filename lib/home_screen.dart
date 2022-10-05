@@ -4,7 +4,7 @@ import 'signUp.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
-
+  static const routeName='login';
   @override
   State<HomeScreen> createState() => _HomeScreenState();
 }
@@ -26,9 +26,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: const [
                   Image(
-                    height: 180,
-                    width: 180,
-                    image: AssetImage('Assets/img.png')
+                      height: 180,
+                      width: 180,
+                      image: AssetImage('Assets/img.png')
                   )
                 ],
 
@@ -102,7 +102,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     TextButton(
                         onPressed: (){
                           Navigator.push(context,MaterialPageRoute(builder: (context)=> SignUp()));
-                    },
+                        },
 
                         child: Text('Already have account?')),
 
@@ -115,8 +115,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   height: 40,
                   width: 250,
                   decoration: BoxDecoration(
-                    color: Colors.teal,
-                    borderRadius: BorderRadius.circular(15)
+                      color: Colors.teal,
+                      borderRadius: BorderRadius.circular(15)
                   ),
                   child: Center(child: Text('Login')),
 
@@ -126,7 +126,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   Navigator.push(context,MaterialPageRoute(builder: (context)=> DashBoard()));
                 },
               ),
-         const     SizedBox(
+              const     SizedBox(
                 height: 50,
               ),
               Row(
@@ -158,4 +158,3 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
-//nbbj
